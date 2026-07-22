@@ -1,1 +1,118 @@
+# Android Traffic Interception with Burp Suite
 
+## Objective
+Successfully intercept HTTP/HTTPS traffic from an Android device using Burp Suite Community Edition.
+
+## Lab Environment
+
+Host OS = Windows 11
+Attacker = VM Kali Linux
+Target = Android-x86
+Tool = Burp Suite Community
+Network = NAT Network
+
+## Prerequisites
+
+- Burp Suite installed
+- Android connected to the same network
+- Burp CA Certificate
+- Proxy listener configured
+
+# Procedure
+
+## Step 1 - Configure Burp Proxy Listener
+
+Open
+Proxy → Proxy Settings → Add.
+
+Configure
+Interface: 192.168.1.83
+Port: 8080
+
+Screenshot
+screenshots/01-proxy-listener.png
+
+## Step 2 - Download Burp CA Certificate
+
+Open Android browser.
+
+Visit
+http://192.168.1.83:8080
+
+Download
+CA Certificate
+
+Screenshot
+screenshots/02-download-ca.png
+
+## Step 3 - Install Certificate
+
+Navigate to
+Settings → Security & Privacy → More Security & Privacy → Encryption & Credentials → Install a Certificate → CA Certificate → Install Anyway → Select cacert.der
+
+Screenshot
+screenshots/03-install-ca.png
+
+## Step 4 - Verify Installation
+
+Navigate to
+
+Settings → Trusted Credentials → User
+
+Verify the Burp certificate is listed.
+
+Screenshot
+screenshots/04-trusted-cert.png
+
+## Step 5 - Configure Android Proxy
+
+Navigate to
+Settings → Network & Internet → Wi-Fi → Edit Network → Advanced Options → Proxy → Manual
+
+Configure
+Host: 192.168.1.83
+Port: 8080
+Save.
+
+Screenshot
+screenshots/05-proxy-config.png
+
+## Step 6 - Intercept Traffic
+
+In Burp
+
+Proxy → Intercept → Intercept is ON
+
+Open any website on Android.
+
+The request appears in Burp.
+
+Click Forward
+
+Turn Intercept OFF.
+
+Open Proxy → HTTP History
+
+Verify captured traffic.
+
+Screenshot
+screenshots/06-http-history.png
+
+# Result
+Successfully intercepted Android HTTP/HTTPS traffic using Burp Suite.
+
+# Challenges
+HTTPS traffic initially failed because the Burp CA certificate was not installed.
+
+Installing the CA certificate resolved the issue.
+
+# Lessons Learned
+
+- Proxy configuration
+- CA certificates
+- HTTPS interception
+- Burp HTTP History
+- Android network settings
+
+# References
+- PortSwigger Documentation
