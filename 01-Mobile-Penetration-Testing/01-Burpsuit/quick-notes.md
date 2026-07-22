@@ -1,8 +1,8 @@
-Proxy → Proxy Settings → Add.
-Android → download CA certificate.
-Install certificate.
-Configure proxy.
-turn Intercept ON.
-Browse website.
-Forward.
-HTTP History.
+1) Proxy → Proxy Settings → Add.
+2) Android → download CA certificate.
+3) Install certificate.
+4) Configure proxy.
+5) turn Intercept ON.
+6) Browse website.
+7) Forward.
+8) HTTP History.
