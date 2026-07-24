@@ -8,4 +8,4 @@ I'm a dedicated Cybersecurity Professional with a strong passion for safeguardin
 - 👯 I’m looking to collaborate on open-source security tools or CTF challenges.
 - 💬 Ask me about network security, ethical hacking.
 - 📫 How to reach me: abbasmansur@outlook.com or connect with me on LinkedIn(https://www.linkedin.com/in/mansur-jisambo-abbas-64541219a/).
-- ⚡ Fun fact: I once built a home lab just for malware analysis!, I enjoy solving complex cryptographic puzzles.
+- ⚡ Fun fact: I built a home lab just for SOC Analyst, I enjoy real time detection of attack and quick response.
